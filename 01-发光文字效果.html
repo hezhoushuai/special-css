@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发光文字特效</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Pacifico);
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: rgb(0, 0, 0);
+            color: #fff;
+        }
+
+        .neon-text {
+            color: #cce7f8;
+            font-size: 32px;
+            font-family: 'Pacifico', cursive;
+            text-transform: uppercase;
+            animation: shining 1s alternate infinite;
+        }
+
+        @keyframes shining {
+            from {
+                text-shadow: 0 0 6px (182, 211, 207, 0.9),
+                0 0 30px rgba(182, 211, 207, 0.3), 0 0 12px rgba(15, 115, 223, 0.5),
+                0 0 21px rgba(15, 115, 223, 0.9), 0 0 34px rgba(15, 115, 223, 0.8),
+                0 0 54px rgba(15, 115, 223, 0.9);
+            }
+
+            to {
+                text-shadow: 0 0 6px rgba(182, 211, 207, 1),
+                0 0 30px rgba(182, 211, 207, 0.4), 0 0 12px rgba(15, 115, 223, 0.6),
+                0 0 22px rgba(15, 115, 223, 0.8), 0 0 38px rgba(15, 115, 223, 0.9),
+                0 0 60px rgba(15, 115, 223, 1);
+            }
+        }
+
+        .description{
+            margin-top: 12px;
+        }
+
+        .description > p {
+            margin-bottom: 8px;
+        } 
+
+    </style>
+</head>
+<body>
+    <div class="neon-text">hellow world!</div>
+    <div class="description">
+        <p>css属性： text-transform: 控制文本的大小写. capitalize答谢字母开头;uppercase全是大写字母;lowercase全是小写字母;</p>
+        <p>animation-direction: alternate 间隔的 动画会在奇数次正常播放,偶数次从前向后播放。</p>
+    </div>
+</body>
+</html>
