@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红月</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            display: flex;
+            background: #000;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .loading{
+            position: relative;
+            width: 8em;
+            height: 8em;
+            border-radius: 50%;
+            box-shadow: inset .5em -0.5em crimson;
+            animation: redmoon 2s linear infinite;
+            background: #000;
+        }
+
+        .loading::before,
+        .loading::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            box-shadow: inherit;
+            background: inherit;
+        }
+        .loading::before{
+            filter: blur(5px);
+        }
+
+        .loading::after{
+            filter: blur(10px);
+        }
+
+        @keyframes redmoon {
+            to{
+                transform: rotate(1turn);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading"></div>
+</body>
+</html>
